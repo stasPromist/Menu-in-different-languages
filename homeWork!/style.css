@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(173, 169, 169);
+}
+.size1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -80px;
+    border-top-right-radius: 50%!important;
+    border-top-left-radius: 50%!important;
+    z-index: 10;
+    box-shadow: 5px 5px 5px rgba(116, 114, 114, 0.6);
+}
+#gemor {
+    color: rgb(126, 13, 13);
+    font-family: cursive;
+}
+.main {
+    text-align: center;
+    height: 200px;
+    padding-top: 50px;
+    background-color: white;
+}   
+.cntr {
+    text-align: center;
+    padding-bottom: 50px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+/* .rela {
+    position: relative;
+} */
+.abso {
+    position: absolute;
+    right: 100px;
+}
+.glav {
+   display: flex;
+   gap: 20px;
+   margin-right: auto;
+   margin-left: auto;
+   width: 1200px;
+   padding-top: 100px;
+}
+.size2 {
+    width: 200px;
+}
+object {
+    border-radius: 50%;
+    width: 50px;
+}
+.dropdown-item {
+    display: flex;
+}
+.dropdown-item::before {
+    content:'' ;
+    display: block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+} 
+#english::before {
+    background: url('images/united_kingdom.svg') no-repeat center top / cover;
+}
+#russian::before {
+    background: url('images/russian_icon.png')  no-repeat center top / cover;
+}
+#japanese::before {
+    background: url('images/ja.png')  no-repeat center top / cover;
+}
+#dutch::before {
+    background: url('images/dutch2.png')  no-repeat center top / cover;
+}
+#hebrew::before {
+    background: url('images/israel.png')  no-repeat center top / cover;
+}
+.position {
+    color: brown;
+    font-family: cursive;
+    font-weight: 500;
+}
+
+
+@media screen  and (max-width: 1250px) {
+    .second1 { grid-area: a;}
+    .second2 { grid-area: b;}
+    .second3 { grid-area: c;}
+    .glav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        display: grid;
+        grid-template-areas: 
+         'a a b b' 
+         ' c c c c';
+        padding-top: 50px;
+        margin: 50px;
+        width: auto;
+    }
+    .second3 {
+       grid-column-start: 2;
+       grid-column-end: 4;
+    }
+}
+/* @media screen and (max-width: 1000px) {
+    .main {
+        display: block;
+    }
+} */
+@media screen  and (max-width: 800px) {
+    .glav {
+        display: block;
+        margin: 40px;
+        width: auto;
+    }
+}
